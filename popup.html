@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>欢迎</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body style="width: 230px;
+    height: auto;
+    background-color: #F2F3F5;">
+        <button class="custom-button"
+        style="margin: 3px 0 3px 0;" 
+        id="loginStatusButton">
+            <svg t="1728123015546" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="914" width="20" height="20"><path d="M0 0h1024v1024H0z" fill="#FFFFFF" fill-opacity="0" p-id="915"></path><path d="M605.888 512.512a290.176 290.176 0 0 1 290.176 290.176 32 32 0 1 1-64 0 226.176 226.176 0 0 0-226.176-226.176H418.56a226.176 226.176 0 0 0-226.176 226.176 32 32 0 0 1-64 0A290.176 290.176 0 0 1 418.56 512.512zM512 64a191.872 191.872 0 0 1 177.408 265.472 191.872 191.872 0 0 1-250.88 103.936 191.872 191.872 0 0 1-103.936-250.88A191.872 191.872 0 0 1 512 64z m0 64a127.936 127.936 0 1 0 0 255.872A127.936 127.936 0 0 0 512 128z" fill="#333333" p-id="916"></path></svg>
+            <span>登录状态：</span>
+            <span id="loginStatusItem"></span>
+        </button>
+        <button class="custom-button"
+        id="fastMode">
+            <span>快速模式</span>
+        </button>
+        <button class="custom-button"
+        id="customMode">
+            <span>自定义模式</span>
+        </button>
+        <button class="custom-button"
+        style="margin: 3px 0 3px 0;"
+        id="run">
+            <svg t="1728123232372" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1533" width="20" height="20"><path d="M0 0h1024v1024H0z" fill="#1296db" fill-opacity="0" p-id="1534"></path><path d="M841.152 511.744l-599.744 388.48a32 32 0 0 1-49.408-26.88V96a32 32 0 0 1 49.408-26.88l599.744 388.928a32 32 0 0 1 0 53.76zM256 154.88v659.584l508.992-329.6L256 154.88z" fill="#1296db" p-id="1535"></path></svg>
+            <span>执行</span>
+        </button>
+    </body>
+    <script src="popup.js"></script>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .custom-button {
+            padding: 5px;
+            width: 100%;
+            text-align: start;
+            background-color: white;
+            color: black;
+            border: none;
+            cursor: pointer; /* 鼠标悬停时显示指针 */
+            font-size: 14px;
+        }
+        .custom-button:hover {
+            background-color: #CDD0D6;
+        }
+
+        .selected{
+            background-color: #CDD0D6;
+        }
+    </style>
+</html>

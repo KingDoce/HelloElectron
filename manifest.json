@@ -1,0 +1,25 @@
+{
+    "manifest_version":3,
+    "name": "NCS",
+    "version":"1.0", 
+    "permissions": ["activeTab"],
+    "description":"Noob选课插件",
+    "icons":{
+        "128":"img/goose.png",
+        "48":"img/goose.png",
+        "16":"img/goose.png"
+    },
+    "action":{
+        "default_icon":"img/goose.png",
+        "default_popup":"popup.html"
+    },
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js":["content.js"]
+        }
+    ]
+}
