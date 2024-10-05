@@ -1,14 +1,9 @@
 // content.js
-console.log('Content script loaded!');
+console.log('内容脚本已加载！');
 
 // 获取网页的标题
 var title = document.title;
-console.log('Page title:', title);
+console.log('页面标题:', title);
 
-// 获取特定的DOM元素，例如ID为'myElement'的元素
-var myElement = document.getElementById('myElement');
-if (myElement) {
-  console.log('Element found:', myElement);
-} else {
-  console.log('Element not found');
-}
+var currentAccount = window.localStorage.getItem('currentAccount');
+console.log(currentAccount);
