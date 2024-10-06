@@ -2,7 +2,13 @@
     "manifest_version":3,
     "name": "NCS",
     "version":"1.0", 
-    "permissions": ["activeTab"],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "runtime",
+        "<all_urls>"
+    ],
     "description":"Noob选课插件",
     "icons":{
         "128":"img/goose.png",

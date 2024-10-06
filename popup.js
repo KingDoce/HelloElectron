@@ -1,8 +1,14 @@
 var loginStatus = false;
-var runtime = chrome || browser;
-runtime.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    runtime.tabs.sendMessage(tabs[0].id, {action: "getElement"}, function(response) {
-      console.log(response);
+document.addEventListener('DOMContentLoaded',()=>{
+    alert('监听到DOM内容加载完成');
+    // @ts-ignore
+    chrome.runtime.onMessage.addListener(
+        (request, sender, sendResponse)=>{
+            if(request.userName){
+                loginStatus = true;
+                // @ts-ignore
+                document.getElementById('loginStatusItem').textContent = '已登录';
+            }
     });
 });
 // @ts-ignore
@@ -54,11 +60,11 @@ run?.addEventListener('click',()=>{
     run?.classList.add('selected');
 
     //按模式执行程序
-    if(mode = 'fast'){
+    if(mode == 'fast'){
         alert('快速模式已执行');
         return ;
     }
-    if(mode = 'custom'){
+    if(mode == 'custom'){
         alert('自定义模式已执行');
         return ;
     }
