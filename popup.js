@@ -1,9 +1,11 @@
 var loginStatus = false;
+// @ts-ignore
+document.getElementById('loginStatusItem').textContent = loginStatus? '已登录' : '未登录';
+
 document.addEventListener('DOMContentLoaded',()=>{
-    alert('监听到DOM内容加载完成');
     // @ts-ignore
     chrome.runtime.onMessage.addListener(
-        (request, sender, sendResponse)=>{
+        (request)=>{
             if(request.userName){
                 loginStatus = true;
                 // @ts-ignore
@@ -11,8 +13,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
     });
 });
-// @ts-ignore
-document.getElementById('loginStatusItem').textContent = loginStatus? '已登录' : '未登录';
 
 var mode = '';
 //快速模式
